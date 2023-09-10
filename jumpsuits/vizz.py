@@ -1,5 +1,6 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
+import pandas as pd
 
 def viz(dataframe, x_col, y_col, plot_type, title=None, xlabel=None, ylabel=None):
     """

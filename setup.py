@@ -6,6 +6,8 @@ setup(
     packages=find_packages(),
     install_requires=[
         'pandas',
-        # other dependencies
+        'seaborn',
+        'statsmodels',
+        'matplotlib'
     ],
 )

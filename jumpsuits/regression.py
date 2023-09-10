@@ -1,4 +1,6 @@
 # regression baybay
+import pandas as pd
+import statsmodels.api as sm
 
 def linear_regression(dataframe, y_col, x_cols):
     """
