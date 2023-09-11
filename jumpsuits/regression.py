@@ -2,7 +2,7 @@
 import pandas as pd
 import statsmodels.api as sm
 
-def linear_regression(dataframe, y_col, x_cols):
+def suit_fit(dataframe, y_col, x_cols):
     """
     Performs linear regression on the given data.
 
@@ -34,7 +34,7 @@ def linear_regression(dataframe, y_col, x_cols):
     return regression_result
 
 # regression formula
-def get_linear_formula(regression_result, y_col, x_cols):
+def get_tailor(regression_result, y_col, x_cols):
     """
     Generates the linear formula from the regression result.
 

@@ -2,7 +2,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 
-def viz(dataframe, x_col, y_col, plot_type, title=None, xlabel=None, ylabel=None):
+def hud(dataframe, x_col, y_col, plot_type, title=None, xlabel=None, ylabel=None):
     """
     Visualizes the data using Seaborn.
 
