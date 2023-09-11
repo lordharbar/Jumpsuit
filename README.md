@@ -1,6 +1,6 @@
 # 🚀 Jumpsuits 👨‍🚀
 
-Jumpsuits is your trusty companion for all your data explorations. Just as an astronaut relies on their jumpsuit, data explorers and scientists can rely on this package for quick data visualizations, linear regression, and more (I promise my foot I will continue to update this)!
+Jumpsuits is your trusty companion for all your data explorations. Just as an astronaut relies on their jumpsuit, data explorers and scientists can rely on this package for quick data visualizations, linear regression, and more (I promise my left foot I will continue to update this)!
 
 ## Features
 
@@ -26,12 +26,12 @@ import pandas as pd
 df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
 
 # Using the viz function for visualization
-vizz.viz(df, 'A', 'B', 'scatter')
+vizz.hud(df, 'A', 'B', 'scatter')
 
 ```
 ### Linear Regression
 
-Use the linear_regression and get_linear_formula functions for regression analysis:
+Use the suit_fit and get_tailor functions for regression analysis:
 
 ```
 from jumpsuits import regression
@@ -45,12 +45,35 @@ df = pd.DataFrame({
 })
 
 # Performing linear regression
-result = regression.linear_regression(df, 'Y', ['X1', 'X2'])
+result = regression.suit_fit(df, 'Y', ['X1', 'X2'])
 
 # Getting the linear formula
-print(regression.get_linear_formula(result, 'Y', ['X1', 'X2']))
+print(regression.get_tailor(result, 'Y', ['X1', 'X2']))
 
 ```
+
+### Train, Test, Split
+
+Use the suit_split function for train, test, split a Pandas DataFrame
+
+```
+from jumpsuits import tts
+import pandas as pd
+
+# Sample DataFrame
+data = {
+    'feature1': [1, 2, 3, 4, 5],
+    'feature2': [5, 6, 7, 8, 9],
+    'target': [1, 0, 1, 0, 1]
+}
+df = pd.DataFrame(data)
+
+X = df[['feature1', 'feature2']]
+y = df['target']
+
+X_train, X_test, y_train, y_test = suit_split(X, y, test_size=0.3)
+```
+
 ## Contributing
 If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome, but you totally don't have to, but you can, it's up to you.
 
