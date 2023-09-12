@@ -5,14 +5,15 @@ Jumpsuits is your trusty companion for all your data explorations. Just as an as
 ## Features
 
 - **Easy Data Visualization**: With a single function, visualize your data using various plot types including scatterplots, line graphs, and more.
-- **Linear Regression**: Perform simple and multivariate linear regressions seamlessly.
+- **Linear Regression**: Perform simple and multivariate linear regressions seamlessly, and produces a simple regression formula.
+- **Train Test Split**: Train test split your pandas data frame in one easy to use function.
 
 ## Installation
 
 To install the Jumpsuits package:
 
 ```
-pip install -e path/to/jumpsuits
+pip install -e path/to/jumpsuit
 ```
 ## Usage
 ### Data Visualization
@@ -71,7 +72,7 @@ df = pd.DataFrame(data)
 X = df[['feature1', 'feature2']]
 y = df['target']
 
-X_train, X_test, y_train, y_test = suit_split(X, y, test_size=0.3)
+X_train, X_test, y_train, y_test = tts.suit_split(X, y, test_size=0.3)
 ```
 
 ## Contributing
