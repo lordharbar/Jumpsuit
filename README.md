@@ -1,6 +1,6 @@
-# 🚀 Jumpsuits 👨‍🚀
+# 🚀 Jumpsuit 👨‍🚀
 
-Jumpsuits is your trusty companion for all your data explorations. Just as an astronaut relies on their jumpsuit, data explorers and scientists can rely on this package for quick data visualizations, linear regression, and more (I promise my left foot I will continue to update this)!
+Jumpsuit is your trusty companion for all your data explorations. Just as an astronaut relies on their jumpsuit, data explorers and scientists can rely on this package for quick data visualizations, linear regression, and more (I promise my left foot I will continue to update this)!
 
 ## Features
 
