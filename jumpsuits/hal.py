@@ -1,6 +1,5 @@
 from tts import suit_split
 from hal_schematics import hal_config
-import xgboost as xgb
 from sklearn.model_selection import GridSearchCV
 
 # train_hal function
@@ -13,7 +12,7 @@ def train_hal(data, X_cols, y_col, model_type='logistic', tune_hyperparameters=F
     - data: Input DataFrame
     - X_cols: List of feature column names
     - y_col: Target column name
-    - model_type: Type of model to train
+    - model_type: Type of model to train [xgb_r, xgb_c, logit, rf, svm,]
     - tune_hyperparameters: Boolean to decide if hyperparameters should be optimized
 
     Returns:
@@ -23,7 +22,7 @@ def train_hal(data, X_cols, y_col, model_type='logistic', tune_hyperparameters=F
     # Split data
     X = data[X_cols]
     y = data[y_col]
-    X_train, X_test, y_train, y_test = tts.suit_slit(X, y, test_size=0.3)
+    X_train, X_test, y_train, y_test = tts.suit_split(X, y, test_size=0.3)
     
     # Ensure valid model_type
     if model_type not in hal_config:

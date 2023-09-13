@@ -4,11 +4,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 
 hal_config = {
-    'logistic': {
+    'logit': {
         'model': LogisticRegression(),
         'params': {'C': [0.001, 0.01, 0.1, 1, 10], 'penalty': ['l1', 'l2']}
     },
-    'random_forest': {
+    'rf': {
         'model': RandomForestClassifier(),
         'params': {'n_estimators': [10, 50, 100, 200], 'max_depth': [None, 10, 20, 30], 'min_samples_split': [2, 5, 10]}
     },
