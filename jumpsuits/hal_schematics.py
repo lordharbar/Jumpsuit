@@ -16,11 +16,11 @@ hal_config = {
         'model': SVC(),
         'params': {'C': [0.001, 0.01, 0.1, 1, 10], 'kernel': ['linear', 'rbf']}
     },
-    'xgb_classifier': {
+    'xgb_c': {
         'model': xgb.XGBClassifier(),
         'params': {'learning_rate': [0.01, 0.05, 0.1], 'n_estimators': [100, 500, 1000], 'max_depth': [3, 5, 7], 'subsample': [0.7, 0.9, 1.0]}
     },
-    'xgb_regressor': {
+    'xgb_r': {
         'model': xgb.XGBRegressor(),
         'params': {'learning_rate': [0.01, 0.05, 0.1], 'n_estimators': [100, 500, 1000], 'max_depth': [3, 5, 7], 'subsample': [0.7, 0.9, 1.0]}
     }
