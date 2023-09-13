@@ -16,7 +16,9 @@ To install the Jumpsuits package:
 pip install -e path/to/jumpsuit
 ```
 ## Usage
-### Data Visualization
+### Jumpsuits Library: vizz module
+
+Use the vizz module to easily create seaborn based visualizationa from your pandas DataFrame
 
 First, ensure you have your data in a pandas DataFrame. Then use the viz function:
 ```
@@ -30,7 +32,7 @@ df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
 vizz.hud(df, 'A', 'B', 'scatter')
 
 ```
-### Linear Regression
+### Jumpsuits Library: suit_fit module
 
 Use the suit_fit and get_tailor functions for regression analysis:
 
@@ -53,7 +55,7 @@ print(regression.get_tailor(result, 'Y', ['X1', 'X2']))
 
 ```
 
-### Train, Test, Split
+### Jumpsuits Library: tts module
 
 Use the suit_split function for train, test, split a Pandas DataFrame
 
@@ -74,6 +76,37 @@ y = df['target']
 
 X_train, X_test, y_train, y_test = tts.suit_split(X, y, test_size=0.3)
 ```
+## Jumpsuits Library: HAL Module
+
+The HAL (Heuristic Algorithmic Learning) module of the Jumpsuits library is a versatile tool designed to train machine learning models seamlessly. At the heart of HAL is the train_hal function, which allows the user to quickly deploy and optionally tune several types of machine learning models.
+
+Dependencies:
+* pandas
+* sklearn
+* xgboost
+
+### Files
+hal.py: Contains the core functions, including train_hal.
+hal_schematics.py: Houses configurations for various models, including hyperparameters to be tuned.
+
+### Functions
+#### Usage: train_hal
+```
+def train_hal(data, X_cols, y_col, model_type='xgb_c', tune_hyperparameters=True):
+```
+
+### Parameters:
+
+* data (pandas.DataFrame): Input DataFrame containing the data.
+* X_cols (List[str]): List of column names to be used as features.
+* y_col (str): The column name of the target variable.
+* model_type (str, default='logistic'): Specifies the type of model to be trained. Options include:
+    * 'logistic': Logistic Regression
+    * 'random_forest': Random Forest Classifier
+    * 'svm': Support Vector Machine
+    * 'xgb_classifier': XGBoost Classifier
+    * 'xgb_regressor': XGBoost Regressor
+    * tune_hyperparameters (bool, default=False): If set to True, the function will search for optimal hyperparameters using cross-validation. The set of hyperparameters to be searched is defined in model_configurations.py.
 
 ## Contributing
 If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome, but you totally don't have to, but you can, it's up to you.
